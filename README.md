@@ -20,7 +20,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [https://insta-story-clone-five.vercel.app/](https://insta-story-clone-five.vercel.app/) with your browser to see the result.
 
 This is clone of simple instagram stories
 
@@ -51,4 +51,8 @@ Features -
 10. Run command: <yarn cypress open> to run test-cases
 11. E2E test cases are there in the code to test flow of the feature.
 12. To test full screen story test cases you need to click on any user when test cases are in loading state it will pass all the test cases.
-13.
+13. This is only for mobile view not for desktop view
+
+@TODO
+
+1. Need to do image optimization

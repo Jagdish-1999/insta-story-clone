@@ -7,14 +7,15 @@ import ShowStory from "./ShowStory";
 import { MyContext, UserListTypes } from "@/providers/ContextProvider";
 
 const StoryUserContainer: React.FC = () => {
-	const { storyData, setStoryData, userList, activeStory } =
+	const { storyData, setStoryData, userList, activeStory, setUrl } =
 		useContext(MyContext);
 
 	const handleStoryClick = useCallback(
 		(user: UserListTypes): void => {
+			setUrl(user.images[0]);
 			setStoryData(user);
 		},
-		[setStoryData]
+		[setStoryData, setUrl]
 	);
 
 	return (

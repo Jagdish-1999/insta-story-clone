@@ -46,8 +46,8 @@ const ShowStory: React.FC<PropTypes> = () => {
 
 			if (activeStory < length) {
 				timer1.current = setTimeout(() => {
-					setActiveStory((prev: number) => prev + 1);
 					setUrl(storyData.images[activeStory]);
+					setActiveStory((prev: number) => prev + 1);
 					timeline[activeStory].classList.add("bgWhite");
 				}, timer * 1000);
 			} else {
@@ -70,6 +70,7 @@ const ShowStory: React.FC<PropTypes> = () => {
 		setStoryData,
 		setUrl,
 		storyData,
+		url,
 	]);
 
 	useEffect(() => {

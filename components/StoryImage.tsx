@@ -17,8 +17,7 @@ const StoryImage: React.FC<PropTypes> = ({ url }) => {
 					className={styles.image}
 					src={url}
 					alt="img"
-					width={500}
-					height={500}
+					fill
 					priority
 				/>
 			)}
