@@ -1,8 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, install all the dependencies by running these commands:
+
+```bash
+yarn install
+#or
+npm install
+```
+
+//Second, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +22,33 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is clone of simple instagram stories
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Used Tech :
 
-## Learn More
+1. Next.js
+2. Typescript
+3. React.js
+4. Cypress.
+5. Next.js api routes to write backend api.
+6. Sass to style components
 
-To learn more about Next.js, take a look at the following resources:
+Features -
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+7. User List is fetched from api. (path for api route is: /app/api/user-list/)
+8. When user click any user profile it will open an new page on it with full image view.
+9. This image will be visible a certain amount of time (for now the time is 5 sec hard-coded).
+10. After 5 second next slide will be moved and next image will be visible.
+11. User can move next slide by clicking half right portion of viewport
+12. When user click on left side of viewport it will move to prev image slide
+13. And when user click on right side of viewport it will move to next image slide
+14. If user reach to last slide it will close the full screen page of story and user list will be visible again
+15. User manually can close the full screen story window by clicking cross icon on the page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+//Test cases in cypress:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+9. Integrate cypress to write test cases.
+10. Run command: <yarn cypress open> to run test-cases
+11. E2E test cases are there in the code to test flow of the feature.
+12. To test full screen story test cases you need to click on any user when test cases are in loading state it will pass all the test cases.
+13.
