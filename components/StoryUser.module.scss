@@ -1,0 +1,41 @@
+.container {
+	position: relative;
+	min-width: 70px;
+	min-height: 70px;
+	margin: 0.5rem;
+	border-radius: 50%;
+	background: linear-gradient(45deg, rgb(216, 223, 16), rgb(224, 7, 231));
+
+	.imageContainer {
+		position: absolute;
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		box-shadow: 0 0 0px 2px #fff;
+	}
+
+	&.storyUserImg {
+		position: absolute;
+		aspect-ratio: 1/1;
+		width: calc(100% + 4px);
+		height: 100%;
+		object-position: center;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+
+	.userName {
+		width: 80px;
+		top: calc(100% + 4px);
+		text-align: center;
+		text-wrap: wrap;
+		position: absolute;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

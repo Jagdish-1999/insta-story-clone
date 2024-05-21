@@ -1,0 +1,48 @@
+.container {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	top: 0;
+	left: 0;
+	z-index: 15;
+	filter: drop-shadow(0 0 20px #111);
+
+	.profileLogo {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		.user {
+			color: #fff;
+			font-weight: 800;
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+
+			.name {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+			.icons {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+				font-weight: 600;
+			}
+		}
+
+		.userImg {
+			border-radius: 50%;
+		}
+	}
+
+	.crossIcon {
+		display: flex;
+		gap: 10px;
+		z-index: 15;
+	}
+}

@@ -1,0 +1,73 @@
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.timeLineContainer {
+		display: flex;
+		gap: 4px;
+		width: 100vw;
+		height: 2px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 4px;
+		z-index: 14;
+
+		.timeLine {
+			position: relative;
+			top: 4px;
+			width: 100%;
+			height: 2px;
+			background-color: #ffffff55;
+			box-shadow: 0 0 10px 1px #111;
+
+			.animatedTimeLine {
+				width: 100%;
+				height: 2px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 4px;
+				z-index: 14;
+			}
+
+			.animate {
+				animation-name: time_line;
+				animation-duration: var(--duration);
+				animation-timing-function: linear;
+
+				@keyframes time_line {
+					from {
+						width: 0px;
+					}
+					to {
+						width: 100%;
+					}
+				}
+			}
+
+			.bgWhite {
+				background-color: #fff;
+			}
+		}
+	}
+
+	.storyUser {
+		display: flex;
+		width: 100%;
+		height: fit-content;
+		overflow-x: auto;
+		padding: 10px 10px 20px 10px;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		& {
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+		}
+	}
+}
