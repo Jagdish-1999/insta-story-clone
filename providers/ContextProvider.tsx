@@ -27,7 +27,7 @@ const ContextProvider: React.FC<PropTypes> = ({ children }) => {
 	useEffect(() => {
 		(async () => {
 			const response = await fetch(
-				"https://insta-story-clone-qwuondnq4-jagdish-1999s-projects.vercel.app/api/user-list"
+				"https://insta-story-clone-five.vercel.app/api/user-list"
 			);
 			setUserList(await response.json());
 		})();
