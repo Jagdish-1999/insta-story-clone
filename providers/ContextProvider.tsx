@@ -44,10 +44,6 @@ const ContextProvider: React.FC<PropTypes> = ({ children }) => {
 		setUrl,
 	};
 
-	if (typeof window !== "undefined") {
-		(window as any).contextData = contextValue;
-	}
-
 	return (
 		<MyContext.Provider value={contextValue}>{children}</MyContext.Provider>
 	);
