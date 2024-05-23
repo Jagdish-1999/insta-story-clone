@@ -78,9 +78,9 @@ const ShowStory: React.FC<PropTypes> = () => {
 	}, [activeStory, setUrl, storyData?.images]);
 
 	const handePrevClick = useCallback(() => {
-		clearTimer();
+		if (activeStory !== 0) clearTimer();
 		setActiveStory((prev: number) => (prev !== 0 ? prev - 1 : 0));
-	}, [clearTimer, setActiveStory]);
+	}, [activeStory, clearTimer, setActiveStory]);
 
 	const handeNextClick = useCallback(() => {
 		clearTimer();
